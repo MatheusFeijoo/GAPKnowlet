@@ -1,0 +1,266 @@
+GENKNOWLETS
+
+▶ Script description
+
+This script has the objective of extracting (meta)data from NCBI databases and transform to nanopublications and knowlets.
+The script is in the genscraper directory. this directory has sub-directories following this hierarchy:
+-genscraper
+    -converter
+    -data
+        -outuput
+        -staging_data
+        -supporting_files
+    -knowlet
+        -input
+        -output
+    -scraper
+
+▶▶ Description of the sub-directories (following the running order):
+
+▶▶▶ Scraper (directory)
+    This directory is the core of the (meta)data extraction of 4 databases.
+    Has 10 different .py scripts.
+
+        ◼ start.py
+            First script to be executed. This script acts as a bridge to limit he script to not extract and convert all the databases.
+            All the provided urls needs to be from https://www.ncbi.nlm.nih.gov/assembly
+            Example: https://www.ncbi.nlm.nih.gov/assembly/GCF_000209065.1/
+
+            The script can be processed as follow:
+            python start.py option
+            (All these possibles options execute the python main.py assembly_url)
+
+            *option* can be:
+
+            ⭕ preloaded: Uses the url.txt in the /data/staging_data/urls.txt directory.
+            All the urls from this .txt file will be scrapped 
+
+            ⭕ ncbi: Extract all the (meta)data from ncbi.
+            Until now uses the eukaryotes.txt file is used to get the urls.
+            This .txt file is from the https://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/eukaryotes.txt
+            This file has all the GenBank IDs, to not run duplicates instances some work needs to be done.
+            The script drop duplicates by TaxID and genus organism name.
+            After that, only one instance from each organism is preserved.
+            The 'Assembly Accession' in each preserved instance is followed by 'https://www.ncbi.nlm.nih.gov/assembly/'.
+
+            ⭕ name: Extract the (meta)data from the provided genus organism name.
+            Example Trypanosoma Cruzi -> genus organism name -> trypanosoma
+            The script search the string in the same eukaryotes.txt.
+            In this case the script takes all the instances that have the string.
+            example: Trypanosoma Cruzi ✅ 
+                     Trypanosomatidae sp. JR-2017a ❎
+
+            ⭕ url: Extract the (meta)data only referring to one url (one organism only)
+            Only needs to provide the url of the assembly organism.
+
+            ❗After this .py file all the script follows the same line.❗
+            ❗The difference is about how many times the python main.py assembly_url❗
+
+        ◼ main.py
+            It is the core .py file of this script.
+            Firstly, by providing the GenBAnk assembly URL a spider (crawler) collect data of:
+            - Taxonomy ID
+                This ID is used to collect data from the NCBI Taxonomy and Genome databases.
+            - Organism Name
+                Name to be used in the 
+            - Version of de assembly (In some specific cases) ❗Seems to be outdated❗
+
+            After this extraction the .py file start to execute command lines in terminal.
+            These command lines refer to:
+            ⭕ python org.py taxidd org
+            Scraps data from the NCBI Taxonomy and Genome databases.
+            Stores the data in a .json file.
+
+            ⭕ python assemblies.py taxidd 
+            Scraps the data from GenBank Assembly Databases (GBAD)
+            Stores the data in a .json file.
+            
+            ⭕ python dataformat.py
+            Due to the heterogenity of extracted data in GBAD a format process needs to be executed.
+            Additionally this .py file collects all the URLs refrring the collected assembly.
+            This URLs list is used to extract the scientific publication data.
+            
+            ⭕ python check_articles.py
+            The access of the related articles with a organism assembly is by an unique ID.
+            Even if the assembly don't have articles related this ID is used.
+            The best and easiest way to collect the data is first to check if the ID return to something.
+            This .py file check the articles existance.
+            Additionally, separate the IDs in two parts:
+                - Assemblies that have 1 article only.
+                - Assemblies that have +1 articles.
+            This separation is needed because the +1 articles page returns a list of the article.
+            On the other hand, the 1 article assemblies return the URL of the article.
+            
+            ⭕ python extract_more_articles.py
+            This is a file only to collect the articles URLs from assemblies that have +1 articles.
+
+            ⭕ python articles.py
+            This .py file uses all the collected URLs and extract all the needed data.
+
+            ⭕ python ../../converter/src/main.py
+            Go to converter terminal and run the main.py to starting coverting the created .json files.
+
+        ◼ org.py
+            This script uses the provide variables (taxidd and org) to extract data from NCBI Taxonomy and Genome databases.
+            
+            By using taxidd variable two different crawl spiders are executed:
+                The first one (TaxSpider) focus on extracting data from <https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id={tx_id}> url:
+                    - tax_id : The taxonomy id of the organism (e.g.: 5693).
+                    - organism_name : The name of the organism (e.g.: Trypanosoma cruzi).
+                    - organism_type : The type of the organism (e.g.: kinetoplastids).
+                    - url_tax : The URL of the of the organism (e.g.: https:\/\/www.ncbi.nlm.nih.gov\/Taxonomy\/Browser\/wwwtax.cgi?mode=Info&id=5693).
+                The second one (GenSpider) focus on extracting data from <https://www.ncbi.nlm.nih.gov/genome/?term=txid{tx_id}> url:        
+                    - link : Lineage information (e.g.: Eukaryota).
+                    - representative_genome : The representative genome of the collected organism (e.g.: \/genome\/25?genome_assembly_id=22605).
+                    - qnt_assemblies : (e.g.: \u00a0genome assemblies: 38;\u00a0sequence reads: ).
+                    - description : Description of the genome. Provided by the submitter.
+                    - description_more : .Depending on the size of the description another related tag is collected referring the expanded version of the description.
+
+            All the extracted NCBI Taxonomy and Genome data is stored in organism.json (/data/staging_data/).
+
+            After that, the same .py file start to preparing the list of assemblies to be extracted.
+            To create this list the a .txt file (eukaryotes.txt) on ftp directory of Genbank is accessed (https://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/eukaryotes.txt).
+
+            This .txt file contains a serie of informations related to each instance in GenBank Assembly Database:
+            #Organism/Name, TaxID, BioProject, Accession, BioProject ID, Group, SubGroup, Size (Mb), GC%, Assembly Accession,
+            Replicons, WGS Scaffolds, Genes, Proteins, Release Date, Modify Date Status, Center, BioSample Accession
+
+            A filter is applied to this dataset in order to use only the #Organism/Name that matched with organim_name collected in NCBI Taxonomy.
+            The result of this filter are all the Assemblies related to a single organism.
+            With this result the script generate a list (../../data/staging_data/assembly_links.txt) with all the Assembly Accession variables, obeying the following model:
+            https://www.ncbi.nlm.nih.gov/assembly/ + 'Assembly Accession'
+
+            This generated list represent all the URLs to be used in the assemblies.py
+
+        ◼ assemblies.py
+            This .py uses the assembly_links.txt file to start the data extraction of all assemblies related to the organism.
+            The data present in GenBank Assembly Database are submitted manually and some of the fields are optional.
+            With this scenario not all the fields are filled. To pass this problematic we adopted a vision to collect all the information in the page.
+            To do that we map all the fields that can be filled in GBAD. 
+            Additionally, the stored data don't follow the same tags in every instance.
+            To pass that we collect the stored data and use the dataformat.py to link the extracted data to their category.
+            The data extracted are:
+                - Infraspecific name : Strain name of the stored organism.
+                - BioSample : Id related to the BioSample database which contains descriptions of biological source materials used in experimental assays.
+                - BioProject : Id related to the BioProject database which provides a collection of biological data related to a single initiative, originating from a single organization or from a consortium
+                - Submitter: Organization that submitted the data.
+                - Date : Date of the submission.
+                - Assembly Type : Type of the assembly.
+                - Assembly Level : Level of the assembly.
+                - Genome Representation : Whether the goal for the assembly was to represent the whole genome or only part of it.
+                - GenBank Assembly Accession : ID of the GenBank Assembly.
+                - RefSeq Assembly Accession : ID of the RefSeq Assembly.
+                - RefSeq Assembly and GenBank Assembly Identical : Identify if the two assemblies ID (RefSeq and GenBank) are the same.
+                - WGS Project : Referring the ID of Whole Genome Shotgun Submissions in NCBI.
+                - Assembly Method : Method used in the assembly.
+                - Expected Final Version : Final version of the assembly.
+                - Referenced Guided Assembly : Referenced Assembly.
+                - Genome Converage : Converage of the organism genome.
+                - Sequencing Techonolgy : Used sequencing techonology.
+                - FTP : Link for the FTP database. Where the assembly is stored.
+                - RefSeq FTP: Link for the RefSeq FTP database.
+                - Articles : ID used to collect the related articles.
+                - Comments : Any comment inserted by the submitter.
+
+            After extracting all the data from the provided assemblies the data are stored in a .json file (data/staging_data/assemblies.json).
+        
+        ◼ dataformat.py
+            Due to the nature of the collected data was needed to format and classify it.
+            The data collected come in a html tag format and is stored in list, e.g.:
+                "a4": ["Submitter: ", "<dd>Trypanosoma cruzi consortium</dd>"]
+            With that in mind the .py script classify each collected data by the first line (e.g.: "Submitter: ")
+            After that, Pandas functions are used to replace tag characteres (<dd>, </dd>, " and : ) and lower all the chracteres.
+            As final step all the format data are stored in "../../data/staging_data/gbad/formatted_gbad_data.json"
+
+            Additionally, the collected articles IDs refers to a list of articles referring to the organism assembly.
+            The UID (e.g: "271508 [UID] ") is a unique ID for interchange between some NCBI databases, in this case are used by GBAD and PubMed databases.
+            The URL to be used in order to collect these lists only needs the UID refering the assembly:
+            "https://pubmed.ncbi.nlm.nih.gov/?from_uid={UID}&linkname=assembly_pubmed"
+            All the created links are stored in "../../data/staging_data/articles_links.txt"
+            It is important to known that all assembly instance have a UID, although not all assembly instance have articles citing them.
+            To check and classify the UID referring the assembly the check_articles.py is executed.
+            The execution of check_articles.py occurs in each assembly route.
+
+        ◼ check_articles.py
+            As said before not all assemblies have articles related in PubMed, to check that this .py script access each UID in PubMed to retrieve the possible article list.
+            The UID can provide three different routes:
+                - 0 articles related : The PubMed database return that didn't found any article.
+                - 1 article related : The PubMed return the article itself.
+                - +1 articles related : The PubMed return a list of the different articles related.
+            
+            The .py spider extract 3 distinct variables:
+                - check_article : Collect data to classify the three diferent routes. Three different values can be collected:
+                    - 0 : 1 article related.
+                    - 4 : +1 articles related.
+                    - 18 : 0 articles related.
+                - url : Capture the url of the accessed page. The generated link using UID redirect to different pages depending of the number of articles.
+                - assembly_pubmed : Collect the PubMed ID when the UID refers to a 1 article only.
+
+            By these differences two different list are generated by the data extracted using the UID.
+                - List of assemblies with an unique article related (Storing the direct url of the article in PubMed and the PubMed ID).
+                - List of PubMed UID links referring a list of different articles related (to be collected in extract_more_articles.py).
+
+        ◼ extract_more_articles.py
+            With the generate list of PubMed UID links this .py only has the objective to extract the link for all the articles related to a assembly.
+            The generated list of the URLs articles in PubMed and the PubMed ID is stored in the more_articles.json.
+
+        ◼ articles.py
+            With the two different list of all the articles URLs and the PubMed IDs two different spider crawlers are executed.
+            Both of the spiders (MoreArticlesSpider and OneArticleSpider) collect the same data:
+            - title : Title of the article.
+            - keywords : Related keywords.
+            - pmid : PubMed Identifier.
+            - doi : Digital Object Identifier.
+            - pmcid : PMC Identifier.
+            - pubType : Publication type.
+            - date : Date of the publication.
+            - volume : Volume of the publication in a journal.
+            - abstract : Abstract of the publication.
+            - authors : Relation of all the authors.
+            - journal : Journal where the article were published.
+
+            All the extracted data are stored in one_article_extracted.json and more_article_extracted.json
+            After that, the collected data is formatted in order to remove some html characters and saved in the articles.json.
+            
+
+▶▶▶ Scraper (directory)
+    The .py files in this directory has the objective to take the extracted data and transform to nanopublications using the created nanopub data model.
+    The .py file present in this directory are:
+
+        ◼ main.py
+            The input data of this .py converter are:
+                - organism.json
+                - gbad.json
+                - articles.json
+                - orcid.txt (orcid of the creator(s) of the extracted data)
+            
+            Additionally, the script uses 3 constant .py files. These files represent each nanopub data model:
+                - nanopub_constant_article.py
+                - nanopub_constant_gbad.py
+                - nanopub_constant_org.py
+            
+            main.py script defined functions are executed in this order:
+                Firstly the date() and orcid() are executed to collect the date and cretors ORCID to be used in the nanopubs.
+                The function extract_dict_from_file() extract the data from "../../data/staging_data/org/organism.json" to a dictionary.
+                The function hash_creation() uses tax_id of the organism.json to generate a hash string to be used as a PID.
+                The convert_org_dict_to_rdf() function is executed to transform the data in the dictionary to nanopub.
+                The convert_org_dict_to_rdf() function uses the nanopub_constant_org.py to place each value of the organism dictionary reserved place.
+                At this point the organism nanopub is created, to save in a .rdf file the convert_rdf_to_file() function is created.
+
+                To generate the GBAD nanopubs the script convert the "../../data/staging_data/gbad/formatted_gbad_data.json" to dictionary.
+                The convert_gbad_dict_to_rdf() function uses the dictionary to link the collect data with the fields in nanopub_constant_gbad.py.
+                A hash using the genbank_accession is adopted to each GBAD PID.
+                Additionally, during this defined function the "../../data/staging_data/articles/articles.json" is converted to a dictionary.
+                The convert_article_dict_to_rdf() is started during each GBAD nanopub routine.
+                This was needed because the the article nanopub data model uses the GBAD PID to state a connection between the nanopubs.
+                Finally, the convert_rdf_to_file() function is executed for each GBAD and article nanopubs.
+    
+
+
+▶ How to run the script
+(Using in the Linux Ubuntu local server - Matheus)
+    
+    Preparing the enviroment and accessing the script.
+    1) ~/Desktop/genknwolets/bioscraper
+    2) source bin/activate
+    3) cd ~/Desktop/genknwolet/genknwolets/genscraper/
