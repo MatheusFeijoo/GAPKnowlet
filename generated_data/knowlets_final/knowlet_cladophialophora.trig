@@ -1,0 +1,98 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/2f2e6dc216f88c226ef5c3d2f178a197> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/2f2e6dc216f88c226ef5c3d2f178a197#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "cladophialophora"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/6fabfcff75a81014ec214f166e21b173> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/1a8bf490189599cff5c3c77cb777e4d2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/b447d71b9093c05785d3bfbaff9eea04> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/153bd73637bb9858e118171583f916c9> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/09fe5d0eaa4fc4919761728194f32842> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/54f814d415c7a9186982ee70c09d5849> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/80a16f8bd2e1c3e04cd34c43107ebe6c> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/bec4098cea1987f4232a9cc40de5dd58> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/139aa1e7ef3897b98f6b9f3fabf2c8a9> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/611062cddab520aace33e489dea33ade> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/ee67d64d96a6373f556acf0cc35d4adb> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/a4b2713b73a9c95379969847ff4e0fe6> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/b362e7a816a2c8754cb1c78010ca5249> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/60c1c2f5da64aff07bedf8305495c337> ;
+    ro:0001018 <http://np.petapico.org/RA2S1m5_FFI0U9cy-vgj3gS95_Myacq-3KaTJUa5gJ9Yg> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Cladophialophora"@en, " Cladophialophora bantiana"@en, " Cladophialophora carrionii"@en, " Cladophialophora immunda"@en, " Cladophialophora psammophila"@en, " Cladophialophora yegresii."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

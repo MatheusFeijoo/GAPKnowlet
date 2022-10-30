@@ -1,0 +1,135 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/09de5db6da6a2b5d41b1cc754747b62c> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/09de5db6da6a2b5d41b1cc754747b62c#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "ascaris"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/bdaa1bad04960b7fb2e3c202b38d957c> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/753a245ed1303a3e963233309127f84f> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/5c367014b71ef04d22cf079d8cbafab2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/07872951b39236c1f9be1a3ba4a56274> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/10015e6cf90f5b44ea50464ee6168f9c> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/353f6cd69421cbeaa9bce25d48d0040f> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/d773cb2112ce22dde315fd7f8cd7db2f> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/28d48396f09acd383377f6cd14beb644> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/7c3b328312d8cdb9c474260cd73eb0f6> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/c6b3b76beeab735d7693d456c3a44e10> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/1cc7e480b77c47bcc60579e09c40257e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/965be19a553edd2050fab0f29f20a74b> ;
+    ro:0001018 <http://purl.org/np/RAVN5NKRKnj_wxmNJhlY3hJJrSCxiUHrOHeLsFGhP01HU> ;
+    ro:0001018 <http://purl.org/np/RAwSY0RIqU2uYrWo67u5PiuuB2F-pWdOh01iAyTzmob1U> ;
+    ro:0001018 <http://np.petapico.org/RAiZoThfCLsI2sM0akvVZ3rkgHi-Qw8Z1kpZvGeU6Os00> ;
+    ro:0001018 <http://np.petapico.org/RAy_keGny_QI5iaqy6RdBTDel6DlUbNXJqqkFWQ5CmE9I> ;
+    ro:0001018 <http://np.petapico.org/RA6SG8t166QGVDCP4BFYdA6rK3IkIxi2emaDO3DHQzmaM> ;
+    ro:0001018 <http://np.petapico.org/RA9KiDdP8QR_GTcUW2WJEoa5_yNfkeN5oxcOeq6dGo71Y> ;
+    ro:0001018 <http://np.petapico.org/RAedLxmq2efz4ee95IGkFW9h9eHui1XFPSgNhKm3jP41E> ;
+    ro:0001018 <http://np.petapico.org/RAy5OBhyuofT2jDzrq02wWbhX_dCzlBtCH9WeCsoYCdCo> ;
+    ro:0001018 <http://np.petapico.org/RAvG-yM66qmHhz-9rY98fjdQ80vOB4SpbGW9nuUcGQhnM> ;
+    ro:0001018 <http://np.petapico.org/RAQs0yUb_VGJPtNLKBINU_X3tPtdTBb6pk5JQ-YnEinc4> ;
+    ro:0001018 <http://np.petapico.org/RAkH6yQzHJz3AzQ4mfyP-IVoUF2yqNGZSXepGI4teWSuw> ;
+    ro:0001018 <http://np.petapico.org/RAFwGHR2BcWgriEF8NP_LHRnHgvyx2yUtfG3IEg9h2ppc> ;
+    ro:0001018 <http://np.petapico.org/RAbDhJ9Bmypoh5gY9cvcuvkpJjqeoSKI1dxVAbwqBabW4> ;
+    ro:0001018 <http://np.petapico.org/RAJT8SlPb5v8RLlPGYa3TUwbzAGrKxSEHBoZ4lmzsA3wI> ;
+    ro:0001018 <http://np.petapico.org/RABkxrfFLmvGOJ6b4pTM0JcENZXBgW0O6Weh2UR4b2LM8> ;
+    ro:0001018 <http://np.petapico.org/RAhAnBg1zNnFjgs-78D6eOHawX4NbOVM_ki6ifz3p_DTA> ;
+    ro:0001018 <http://np.petapico.org/RAY7RlT8vYfolqhf_joYzeKa1RMpGlgKDEKkMLuwQImlY> ;
+    ro:0001018 <http://np.petapico.org/RAPq0Dy1AgV7XTat96C1ZCDh7wsPXdbrBaWSVbdx8xQDU> ;
+    ro:0001018 <http://np.petapico.org/RAaBa0Ra0Rp30jMflsi2I5lo6JArskdxlrCg1B3FOYKZo> ;
+    ro:0001018 <http://np.petapico.org/RARkLtztVE5NgrgC9NXzXuOyIj3FrQ9yYVhFi5w6zrqTU> ;
+    ro:0001018 <http://np.petapico.org/RAgrWi0fxh7fN1NpmZ4_pT-DHudy2TAjDiTnhdUXJdxMA> ;
+    ro:0001018 <http://np.petapico.org/RAAEv777TMalEmzKOTn4tEgejUk1P6Wduleo9ZoO9jMxc> ;
+    ro:0001018 <http://np.petapico.org/RAHbK9a2jiyiOfwrjetour-xXgh9gHnmIhZHxtri5qm-0> ;
+    ro:0001018 <http://np.petapico.org/RAfmXdnx2EgRhX5EmeaBFeXamJhxw4yMqqXao7MVibAUA> ;
+    ro:0001018 <http://np.petapico.org/RAbuPaQBuxY03GSdVID37K3GrvJJDIaKVdlGI9mppWBFM> ;
+    ro:0001018 <http://np.petapico.org/RAoSU8CCkdcMXIbG4BctFuf0ZbqNmPaI_pGha-WfT6nVE> ;
+    ro:0001018 <http://np.petapico.org/RAtZpOJYHMzdHGp9b-aIBIp4Y0k0ireuZKvMxZNByC0zs> ;
+    ro:0001018 <http://np.petapico.org/RADF83qjOSJF9bLiFXqlyWk8IjakLqLTg-Im3pgXrVMZE> ;
+    ro:0001018 <http://np.petapico.org/RAvyE-aMe6bSiC85Hi53bLuLRo_lBCY5DOrYLhXelkndI> ;
+    ro:0001018 <http://np.petapico.org/RA47iQE3g9JlaxWAUVPkTp2bv4n_NUTZi7wXGnQSuQ3IY> ;
+    ro:0001018 <http://np.petapico.org/RAhlna9bsCvlVUBmFMAuo0ZwXYhsC7DvBv8iRxSiFzCxw> ;
+    ro:0001018 <http://np.petapico.org/RAc6msU23z9_92nRDQcjn3E5jbLknb_Gv5_D1Xs2kM14Q> ;
+    ro:0001018 <http://np.petapico.org/RACfFLWWLWpm9RrOQaqgfi2Hap8POqKMorgQIoakBYqm4> ;
+    ro:0001018 <http://np.petapico.org/RAwatJUHWjzJT5xTPPDtWR_g9L5fPXde8jAo37tMZsOCc> ;
+    ro:0001018 <http://np.petapico.org/RA1XSS6pOFGSiJxOVrlMTMnNvATTdGZLuHrI0MWDzts7o> ;
+    ro:0001018 <http://np.petapico.org/RAKKtRgwiwm8yxf02JKLcJCtTJO1WlUCSQ0GwojvRywJo> ;
+    ro:0001018 <http://np.petapico.org/RAvI8jHaPWdm43ZGb_tmN8lTvelCSQci9YCLZJL3hKg88> ;
+    ro:0001018 <http://np.petapico.org/RALnxJmIhZg83bvtI8KP3YEaTjA4Br4zH9AR23MTFOWMg> ;
+    ro:0001018 <http://np.petapico.org/RA_G-YyTQjgkqRTKEKVT8EkkcvvvKKXBL8Jlvzo4YXBbM> ;
+    ro:0001018 <http://np.petapico.org/RAMnruT_byiJ7Qy3W49qK2uEf__PX0aqVDJfQA-ezha-E> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Ascaris"@en, " Ascaris lumbricoides"@en, " Ascaris suum."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

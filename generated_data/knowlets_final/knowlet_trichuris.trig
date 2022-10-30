@@ -1,0 +1,108 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/bbb1625d62864ae74bc0d85a9231f074> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/bbb1625d62864ae74bc0d85a9231f074#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "trichuris"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/36208bcc047d66a471083bcdab3b3950> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/3a6493881327b92234336cb6fad0d447> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/8f38697d7453f69a391707f47eda1f34> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/2627863bff0c80b2a2952b940b5b3226> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/6bc34998433839186c655c9a2e22804e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/119550ec552bfd44181296dad0cbeaf4> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/00b5f4f8bc5f9f4f1ec6c12b880879bf> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/f3112e71eb9554b780d4243ef11e6a41> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/8d1ada789f2ef66ef96a7a049ce3dca1> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/b3ba55a9480d9719c3d9698ae99add6a> ;
+    ro:0001018 <http://purl.org/np/RAVN5NKRKnj_wxmNJhlY3hJJrSCxiUHrOHeLsFGhP01HU> ;
+    ro:0001018 <http://purl.org/np/RAwSY0RIqU2uYrWo67u5PiuuB2F-pWdOh01iAyTzmob1U> ;
+    ro:0001018 <http://np.petapico.org/RAyb99CeQcg3557INeU3bM469uN-DxbYnqXpVrzMbB80M> ;
+    ro:0001018 <http://np.petapico.org/RA3hzGTok-uSxGiovtJM-XaRYTW4lSLIYe5bO67ahWYno> ;
+    ro:0001018 <http://np.petapico.org/RAYYCI9hRTazGXT8k00OmKR286phInjs-kMci3cCHo2OY> ;
+    ro:0001018 <http://np.petapico.org/RAcyTzuYv-TcIKm-I2lgJsIZwah5KCm8jacvMrpmMsCT0> ;
+    ro:0001018 <http://np.petapico.org/RAqj4nHesNI88PVkYFSRPk_NLWlPoRBjz4t49xFVR19mA> ;
+    ro:0001018 <http://np.petapico.org/RAu_VLhgxQ4NZWrQ4g5TtAxSId5QgRpVANnenGsJ0p4X8> ;
+    ro:0001018 <http://np.petapico.org/RA0X21_WXx9RGwHMEtNrYcf6zP6YRNHvIIIvE_sv0EXJs> ;
+    ro:0001018 <http://np.petapico.org/RADuvDgGI5wYnws8h-wHmU9o7GMhKIpx51G6W3GWhgEa0> ;
+    ro:0001018 <http://np.petapico.org/RAP10vva8s5DcyI0zY1wnioglI-Nuji641R06Pk_aDjCA> ;
+    ro:0001018 <http://np.petapico.org/RApWnsAlJR_oT0ZaeDSUINWL8Alwlz3MPgMduAgxDm0A0> ;
+    ro:0001018 <http://np.petapico.org/RAmOshJrwp682BastnPbE3E1948921C8hrgMeeqlyd8eY> ;
+    ro:0001018 <http://np.petapico.org/RAJrUkr1DjRLatFCjof7s923XNL0XtxgT6TphkvHXH7zc> ;
+    ro:0001018 <http://np.petapico.org/RAyNgrJmgjISl3V_OwFNJKYjwHvSQKZUCwylxD3FBnNhY> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Trichuris"@en, " Trichuris muris"@en, " Trichuris suis"@en, " Trichuris trichiura."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

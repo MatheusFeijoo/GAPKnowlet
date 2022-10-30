@@ -1,0 +1,150 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/db1ed40a55dbe5467002f950c8847bf7> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/db1ed40a55dbe5467002f950c8847bf7#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "curvularia"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/9e2bd43fac868eaf9b9ea94780565674> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/715a8ebb24ea43c102a7aabfa49695e9> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/14f936dcbfb62bc2fdffda4a26dcfb62> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/8f2468c520d804997eae84f7b4f9de7e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/e33817315607a1bd0107d2e742a76720> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/2859e5f05cd5c5d2500b7f038168f9ab> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/7bcbb8d3f8d9dc4b433234534562c46c> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/8061be81bfab9272e400c223f178eaf6> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/b0d3ef14a78bf1653061b8988fd16226> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/73a3bfd7bcfa0a80630f21e8c061da25> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/122cf90d40b91466d4f99c2b9a6d94bf> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/2a733218d93eb221f49098a6fe86a935> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/12c5485635e501334bbf6781504690ab> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/96fed5ff5977c95395666d9d48ebe73b> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/ace7af0a764957f8e09a24c4e54689dd> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/f36b8f03f1a6682a3cd86f38b1b9069d> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/8636d811a658d5722e4d280ea476cb0d> ;
+    ro:0001018 <http://purl.org/np/RAtxDMdVoYkNME38XUJ2RSU8foK22plwk311SFvoHCYMU> ;
+    ro:0001018 <http://purl.org/np/RAamIsGYvyGvUJnLVQuASrJs5EuizhzTuPjsQgH8oOnYk> ;
+    ro:0001018 <http://purl.org/np/RAan_61c7YtdTW0RPBHCCy9dbTQ0F-RIYOm1Bue63qlIc> ;
+    ro:0001018 <http://purl.org/np/RAaYJGxggT7trumZyDbp9OkSncF30RRCjKIMBquoCROk0> ;
+    ro:0001018 <http://purl.org/np/RAfbqM835xXHtwi6nOUxEZR-KCsG7v8iAYXkQJz8sI3R0> ;
+    ro:0001018 <http://purl.org/np/RAQlO6phV5PL0xFpfBRhHmbDpEbw4AKfJoXXlUnqOXPMo> ;
+    ro:0001018 <http://purl.org/np/RAS4-pDvI85quDHl7GIJ_muJJBpbEr-pepoW6TIByjHHY> ;
+    ro:0001018 <http://purl.org/np/RASIjcNDkQkQZyaXMfLHyaTDXKNtl-wUI4X4TATBgacPU> ;
+    ro:0001018 <http://purl.org/np/RASwuzUXUXc2WrtkpaTYSRPmOQlBZeBK89sGCAuhkJqus> ;
+    ro:0001018 <http://purl.org/np/RAT3H-8p4BeTtWCJA5l0T4AzER4p5uI1k8JuvHW7SY_SU> ;
+    ro:0001018 <http://purl.org/np/RATjXpHuKQMCXKle8QwTnvaOKbN89ijmDzK5bYPo778Bg> ;
+    ro:0001018 <http://purl.org/np/RAUH5gz-8cQL9HUOcNYMduJJHot00K4iaEMKnSlFrxbXA> ;
+    ro:0001018 <http://purl.org/np/RAUtLdOP_kGDdA4RZAiWCP4ZdZyd1JwELAA770Qcw1Z9E> ;
+    ro:0001018 <http://purl.org/np/RAV0GJl5mCaW1jopfhfmATte-t175YfDjGZpbOnYtygYs> ;
+    ro:0001018 <http://purl.org/np/RAVkTTLUYiDDXaNQPTlX3sOLLU1ubgkIx7YV9gnozmvgs> ;
+    ro:0001018 <http://purl.org/np/RAYd_a_z8l7mEX1gjkwYwyQv1IAI3bicI1M_45KCvpnvs> ;
+    ro:0001018 <http://purl.org/np/RAicQ5YJ3YqnjvdiAkNlqWDcbLLY-uu1Omv8vCfMAuzbA> ;
+    ro:0001018 <http://purl.org/np/RAkXy_y1J5mCISLRhe23belTbiO24TIHqYAxHedIFWvoU> ;
+    ro:0001018 <http://purl.org/np/RAlSqAIDq1-UxGxc_N6najUNfKONKqM6v5Dzo2jyg-C6w> ;
+    ro:0001018 <http://purl.org/np/RAmfYIMakYqsaSDvfNbnQEF66emQ8WsTYnEDWf4rYTHAY> ;
+    ro:0001018 <http://purl.org/np/RAmI7wQbRe3cDQOHh4YR3yGBWw2OJghAMy2sWbfXQCzRs> ;
+    ro:0001018 <http://purl.org/np/RAmYtFDDA0yZiHB-UktDCJGQp0kGr97hgRj9JuF1OvgLQ> ;
+    ro:0001018 <http://purl.org/np/RAo37EqVABAhJMB-K3Yf2e9G4xT32N0gc3lPmJ7KBgZtU> ;
+    ro:0001018 <http://purl.org/np/RAr9LNin8SqiHP3CnvPTsuDsmXARObH-bH146pZbsEn84> ;
+    ro:0001018 <http://purl.org/np/RArHj_vx4mY0TvGWo6sbbIsuD5JbsikkJV0PrqbyN0iso> ;
+    ro:0001018 <http://purl.org/np/RArjaBRW0k8RX8cEkGOl4tiyUiN9SajjBRkPOk-_VQsmo> ;
+    ro:0001018 <http://purl.org/np/RArjdhXi_5TZ-BC75otchNK54ZFs-bClwdSGMYlc4gvLI> ;
+    ro:0001018 <http://purl.org/np/RAsT57U_FRUL1lswhCtHpl9ESq_Me6IEDY4mBXDfChuJQ> ;
+    ro:0001018 <http://purl.org/np/RAuVatsA70BO15TA6LeAtOWxysbgVcWnR4SmzLSMVAavc> ;
+    ro:0001018 <http://purl.org/np/RAF3j-Ep2x37oOii9mG8luZX3QkA-XVqPJRRBRqBDyvlQ> ;
+    ro:0001018 <http://purl.org/np/RAFxQLw8NdOcMf-xa8HySNcEbuDuKKbStAALJUlTNtAuM> ;
+    ro:0001018 <http://purl.org/np/RAG7yUZpEQenFESoFrWrsrfxNzLbnnYWopfAB5UH55Mgk> ;
+    ro:0001018 <http://purl.org/np/RAMac87U9T5CdjHnf1YupGjttdxvXU8_UsodXwk_-sVug> ;
+    ro:0001018 <http://purl.org/np/RAMlg_nf1xcgXbIcoMLDzdhxKUvr9i26gm2abbWURWxOg> ;
+    ro:0001018 <http://purl.org/np/RAOtzBp9bwiidZvX1QOb0Rl2pPRcCTg_JipzCXMpSzMSk> ;
+    ro:0001018 <http://purl.org/np/RAP5wqpz1n2WTYTpZAWsS_SbBWnSGk3AjARkErgpWez3E> ;
+    ro:0001018 <http://purl.org/np/RAPI5FQZ3EXbtSCEx1wOcpkThI0PAEhh8HtM-5Ssc_3kE> ;
+    ro:0001018 <http://purl.org/np/RAPoL0-y5h16pxzeYovQ8dHc39kr6WPVBF2kmj1vCaUKc> ;
+    ro:0001018 <http://purl.org/np/RAwQ78Bh7jpR1x2qnZFi6MkIqggGBE2UGhy8y7ksKFK-w> ;
+    ro:0001018 <http://purl.org/np/RAyENJovaPuxTlY6sN_GLumkwUJaRmxNQvcVPcts4iHmg> ;
+    ro:0001018 <http://purl.org/np/RAz3AmDGBX6OgK7THwV5NCo88lOs_Y1L6LJWu79PjgPG8> ;
+    ro:0001018 <http://purl.org/np/RA1e9zegccLxskwlC70kvK9MTq9PA2nM54rJE61YyzTyw> ;
+    ro:0001018 <http://purl.org/np/RA1S7WXzLmfJB9FKKfmFTR1040pRxihskUUS-q-H5KWUE> ;
+    ro:0001018 <http://purl.org/np/RA1UejP3Ql2U7f3uPSMyGXI8HT6_ChMdsgoFJzAi2HSHk> ;
+    ro:0001018 <http://purl.org/np/RA2aki6U0yt3hXNG02LGandaWerDD1EAZRLOef9gAbU4o> ;
+    ro:0001018 <http://purl.org/np/RA2JVPZ4KEjXV9aHVH7mEPoiZKOSqTpWp81jAFmygiJaw> ;
+    ro:0001018 <http://purl.org/np/RA5RWmMhfmmk7UaPqfMclV79Dzf-8H7Mo1w2BsoShsVUQ> ;
+    ro:0001018 <http://purl.org/np/RA7ezfNw7kqtUIwnOTvck_1y2DxcGZIhCYd0eX-SHxNvk> ;
+    ro:0001018 <http://purl.org/np/RA8am87MZdYMW1boOfcRCKWvpWUpqJ1mnLJyjhet0TAVA> ;
+    ro:0001018 <http://purl.org/np/RA9Eym77UhCcDXFVW1JtBHAQoLo46HpXdPFNH1YvpBwTw> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Curvularia"@en, " Curvularia eragrostidis"@en, " Curvularia geniculata"@en, " Curvularia kusanoi"@en, " Curvularia lunata"@en, " Curvularia papendorfii"@en, " Curvularia sp. IFB-Z10."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

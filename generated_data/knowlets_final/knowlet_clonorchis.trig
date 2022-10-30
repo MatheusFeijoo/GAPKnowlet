@@ -1,0 +1,106 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/d9cd249df8a0ccdc89cc87a8f9f421ac> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/d9cd249df8a0ccdc89cc87a8f9f421ac#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "clonorchis"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/dfe68a0b9709ecf2abfe9df89ece924e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/4381d08356911fbf661efa4e9c60889e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/ba714b3c5edd2d487f3ba492b0ef4ede> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/505c10b534bd42bcd561acefad2ae2f5> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/094748ce1d87f80dbaedc5ad73f6f4d1> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/6f75e58ae0fcac3f47605f1e61562ace> ;
+    ro:0001018 <http://np.petapico.org/RAJEgWzoY3sOdAZ_iHEpDLLmZHB1kt63OYWkeuk1kvwh8> ;
+    ro:0001018 <http://np.petapico.org/RA51Js31V4WD0kHCYncZjV_56WB8ByLolDmJA9UVWjrUE> ;
+    ro:0001018 <http://np.petapico.org/RAkVo_dV0cWFu8PftAhlKL3umMp7McpB89ZSnaxL1R7Kk> ;
+    ro:0001018 <http://np.petapico.org/RA9dlBBjWOHfNJu6IMsV-vc7f8wklr0qy6C2Vss5ZM2Yo> ;
+    ro:0001018 <http://np.petapico.org/RAjat87hkIAFXx8kLE3qAT35zmEbmRg3_-7xUdlnG0q3s> ;
+    ro:0001018 <http://np.petapico.org/RAkmoBRHI1Ue6s4YnQJjhg1PCQO_ithA2w039k11yk5Vc> ;
+    ro:0001018 <http://np.petapico.org/RArOL0m6oRFU4YHc97eR6aHAWBobWDkOwoz2NqrKkxv1o> ;
+    ro:0001018 <http://np.petapico.org/RAZygM2D1SAYYJ2rY7G3I3jQSnqgWgwaxn_qfep1faEoE> ;
+    ro:0001018 <http://np.petapico.org/RArK9woIIDH8v_-c9RYQfVzRdUr3pjbgNGA3rZamdEPIo> ;
+    ro:0001018 <http://np.petapico.org/RAs1XHp3pf06nnSEpsjFIFF_bpCXDyqykk3Ui-c6ZIt9Y> ;
+    ro:0001018 <http://np.petapico.org/RAI2Zn3AAZJq5OGTtIYNvOxisSn4bIfjaVFZc64SrR6Bo> ;
+    ro:0001018 <http://np.petapico.org/RA1a6eoe2AyF2qrMClMi3SJtZH4Iq6-NmJK11fCPEa20Y> ;
+    ro:0001018 <http://np.petapico.org/RAmCG7eWmeCOn7CIpDa0xkiLLxk4xE3evACHQvA-J6Hqk> ;
+    ro:0001018 <http://np.petapico.org/RAO0vkRavVJWPv3VQUfJe5zPCaXAGfVE-sPDDmJ8poDxg> ;
+    ro:0001018 <http://np.petapico.org/RAMA-v-YT8ZRXrnrK-fV4uRJ33nQqTUWzsrTG9LXViklQ> ;
+    ro:0001018 <http://np.petapico.org/RA2sMJ2cvJ5auE0yrisx-UwermIiz9y5Fio4g8UjCGTGA> ;
+    ro:0001018 <http://np.petapico.org/RAM5CSk62xbZ9v9Au-LUx3hvZrcHDv-cIpoGeBtqU2lc0> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Clonorchis"@en, " Clonorchis sinensis."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

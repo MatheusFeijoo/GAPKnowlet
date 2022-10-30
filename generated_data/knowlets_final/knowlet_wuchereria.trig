@@ -1,0 +1,104 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/6b4f03a58679bf34cc71f0683f49525f> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/6b4f03a58679bf34cc71f0683f49525f#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "wuchereria"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/b13ae9dd5adfc836e1f17ff82d08b6db> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/77fafccd64462fc76c842ca001cd6a62> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/af3a6c2fa13f17012deec6bc7906ac56> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/c662f4fe58e3aa96562c2a9a4c0bc422> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/f0a6bcbaad80c68d487b11b449cfcecc> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/3b8a6838b5e798a67f0d03a0aad68862> ;
+    ro:0001018 <http://np.petapico.org/RANtwcEg9mIEfmpvR7rHPcxKaHRGlxbxgJ0LA75LClbbY> ;
+    ro:0001018 <http://np.petapico.org/RAGtiIdiVQLuJFSsP5qncdM_fhmIcxG3AeRWEzNv1X62E> ;
+    ro:0001018 <http://np.petapico.org/RAkK4VHSfP9ZUkYNxWqaQyMOFvI_NU-wMe7c2WIkn17J0> ;
+    ro:0001018 <http://np.petapico.org/RAFNMrtukcup3n1DiLfYqg0Jug2T3QY67xBi3Twpl12fc> ;
+    ro:0001018 <http://np.petapico.org/RAzI-VsMmsP6gPMYm8jwlXARpy1A9ljbL7_lf12MGnUPU> ;
+    ro:0001018 <http://np.petapico.org/RAdZWADkam9KjyJtrfNZd14_ll1yQokfQD1x6l4B5NnwU> ;
+    ro:0001018 <http://np.petapico.org/RAwkRNIphHBXcxd52iBN61QdeSLKf1wf5KU4RYTFihlcA> ;
+    ro:0001018 <http://np.petapico.org/RApabyhO3LqK7hRUl8vyDT7N1Q5VbhUEcRnh_-XZjhUCQ> ;
+    ro:0001018 <http://np.petapico.org/RAibs9ir_7ehT0NxuFRAi-IaNibmx1tfGtVXtx-FhnWR4> ;
+    ro:0001018 <http://np.petapico.org/RAQOwowCiBDnKCUaRZyv21nXxql-7bbrRI0pYCg61XaRs> ;
+    ro:0001018 <http://np.petapico.org/RAckvhh7NW0UIn3tKvDIOvgZpdRLG97CxGbTrRKLaxOxg> ;
+    ro:0001018 <http://np.petapico.org/RAUfdMISj93e_jgCTOrnVP3xCJhmuT-VZfuPzzYPyapQA> ;
+    ro:0001018 <http://np.petapico.org/RAJ80lS7sRrjrFdNhU7v0qDfJLzHkZAaz5p2oDUjejDe8> ;
+    ro:0001018 <http://np.petapico.org/RAFwK7cIdFBONu4qLznRMlgW_FpXiTDMwxpNIR-KUvBdc> ;
+    ro:0001018 <http://np.petapico.org/RA-FPemNiGaey94bb92yOuYOtQLwFRHtTwYjxVW6CCcOs> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Wuchereria"@en, " Wuchereria bancrofti."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

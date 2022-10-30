@@ -1,0 +1,130 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/95ec9f29ce8062f7d633995eb9a926c9> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/95ec9f29ce8062f7d633995eb9a926c9#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "taenia"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/e9613fd1f0aaa800dce41983bcbd2b32> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/255bb3ded12e8dbbedc670decaa7d455> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/39be0ed58ee6834712e372588e9081d8> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/cddb2e9d84306c4e7a9dbf0fa55e8f22> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/15159b250575dcf15269c6906bb52e10> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/d4d2c6533626c1c49e73d4f1f5a9afa4> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/e50a34d0f26788818a3ec3965006fde1> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/b3be0e6ef5eddb33fd293161cd915377> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/ea76b544dae70eaa97597750741b0424> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/ceb18c901f30bc044be62771bcac5489> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/fdcfd58316e1facfae03ee97cc3b1978> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/b07a8c3d97e45f278a9c5de19fdf79b1> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/5e8f26fcc6802389f1b6449316f07bb2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/e25942c666f89bb58b3a4c8a4ff37d69> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/4889c23dfc50daf9c2512a6d67fcf9e0> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/47700ccf5d638ab47c40cd39adb245a1> ;
+    ro:0001018 <http://np.petapico.org/RAkQdTwK6nmV2Z6aGjdGGPBgAUVB-6-UncfWIXYFvG1ag> ;
+    ro:0001018 <http://www.tkuhn.ch/bel2nanopub/RAqdN5VfyfNq8goZbWH7jUue9zUBuRUXxGBn-nCXVviPQ> ;
+    ro:0001018 <http://np.petapico.org/RAAA-3spHqtwgOZcIOF8qmzJhzzYYGQfzUw74mJFUo9PM> ;
+    ro:0001018 <http://np.petapico.org/RADbt-NQr5PXBxLQ9iayYx6mL2RdLJj6z1Mq2zhvR-06Y> ;
+    ro:0001018 <http://np.petapico.org/RAmn1Q03j1hsSYpINzWsQK1uBHtPn0EDh1wjFyD5jR_d4> ;
+    ro:0001018 <http://np.petapico.org/RA4SpYyFIiCpFMtDKk_Zso_DDOBmUqUuJEuopuqnL2jLE> ;
+    ro:0001018 <http://np.petapico.org/RAcVuebDP8KQ_7shKBZxoasmun0nhb6EkjAcLyai98ydM> ;
+    ro:0001018 <http://np.petapico.org/RA4jKwHLehmN8SgWbJ-iwDKGG37-ivvPwVAngwiiUo0Qo> ;
+    ro:0001018 <http://np.petapico.org/RAgR__-qktkpmgEd8GYf89Q7WAXLzldXs_WtG7qz7uy4Y> ;
+    ro:0001018 <http://np.petapico.org/RAGpp-SrRyTNm1BRMOQs9cWl-oRuPwDGmq9z5zlI3Q64I> ;
+    ro:0001018 <http://np.petapico.org/RA82u3d8TbAQjCw2F-pa82_eVaELmkV6pXdeRthtjNZR4> ;
+    ro:0001018 <http://np.petapico.org/RAD-lYjyBm_-D2qyL057uM7a_UvP9BMuyRKszn9CjaCWs> ;
+    ro:0001018 <http://www.tkuhn.ch/bel2nanopub/RAxrpyEJi19WE9aYAEe20XW3iuoc-1U_xv6CNIVE4VYBU> ;
+    ro:0001018 <http://np.petapico.org/RAkexBqGHBKEoE_D0n8Sl3RprWCj1Vl_KW6evoCMf7adA> ;
+    ro:0001018 <http://np.petapico.org/RAsWzEmHU5Xhh6-d71bejy39FDMrEQQLaUq9FJovq0Qfc> ;
+    ro:0001018 <http://np.petapico.org/RAqn11trtovyoOX8s9eyF2DrvOjHYMzME7FnHgoZkGPYU> ;
+    ro:0001018 <http://np.petapico.org/RAPDGJ5XHXARReDEJtNOAf2q4jrgJc_q2NW5eJAZOnECc> ;
+    ro:0001018 <http://np.petapico.org/RARhNR1hp1LI0kZvNL0hkcdzN_CR7xZYlQaOvrNYzkDoQ> ;
+    ro:0001018 <http://np.petapico.org/RAwlVLGE1zVFi2rbanzd-_zaxSrElvzyYMt8mYjqnZpHM> ;
+    ro:0001018 <http://np.petapico.org/RAazZwSPi5B7jpEaubVu4MIa_Mfkb3XSAnFABddRaGBEQ> ;
+    ro:0001018 <http://np.petapico.org/RA4bnG9IUCp-Q3emrqIVfVMuAKauzDxf931VtaRvBqPyw> ;
+    ro:0001018 <http://np.petapico.org/RAOpNYh36kXzpvWpMT4yJTwun2_h0KZ7ckdbGDa1XenZo> ;
+    ro:0001018 <http://np.petapico.org/RA_IaYrbBbDOqUELzO9_eMgDYycLQi4QnQ0lnoAlUlA80> ;
+    ro:0001018 <http://np.petapico.org/RArJyzfCkY0KBtiKd6GVH29T-vNCPzxOfhCsDE8zQZ-xM> ;
+    ro:0001018 <http://np.petapico.org/RAhEMauyPq7j_SYVahliCCc99iJVapRomeRuJNcmbe-R8> ;
+    ro:0001018 <http://np.petapico.org/RAMytKBbwO_jG3ffZl08ZWSTFopxzluhteTJ80U3Ho1QM> ;
+    ro:0001018 <http://np.petapico.org/RAg2pC7voiyr0ltEncAW3H4M_NdtYxZtZDEdrNnwK4j14> ;
+    ro:0001018 <http://np.petapico.org/RAmOutYw0ZxKkXTDNlkkrrsA-K_qIvXtaCevnIz6wgb_s> ;
+    ro:0001018 <http://np.petapico.org/RAz2ydPmatBTv-A0o8jOEitmfwFP_Do9E2tR-8hiLZ3EU> ;
+    ro:0001018 <http://np.petapico.org/RA5DhBz5IHx0QOejExCaSylroYfhW8uUjlzT7DtSgokrs> ;
+    ro:0001018 <http://np.petapico.org/RAxfb_j-aqCXF5r7SpcdtGS0LD61-_dhVRhi23W5D3Y0A> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Taenia"@en, " Taenia asiatica"@en, " Taenia multiceps"@en, " Taenia saginata"@en, " Taenia solium."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

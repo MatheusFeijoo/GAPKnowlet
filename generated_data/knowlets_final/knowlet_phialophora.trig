@@ -1,0 +1,119 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/7881cbc3dda6d0443824a7cb79722c56> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/7881cbc3dda6d0443824a7cb79722c56#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "phialophora"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/f5f5d6187dfd693a9bc50e9a325d59bd> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/fe95f2bf03b72b9b2e2afef408054202> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/a0fc8d8d9cf11b17acb8b9da53c4f3bd> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/a00824ee68c0bbd8f39fe596a0f7f0db> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/3a3088354a67a804306591d942822b17> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/9116318d40a3436716ce40a480cbf2ce> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/cfe16ec549a565bd9bc8609372e785b3> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/337fa25e9b705038a0e78921b0794b2e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/5e96e34512a268aec995e91201f4c9ac> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/2da703d21a2734f3f7d9ff11a5f1b482> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/a896ebc40bff2a28ab6d001cccaf9555> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/40d12d30f036d1c384c6dcc359ca27c2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/54713e7987cdfdc261ec024f21baa6c6> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/6c28cb48fab612bb996d2149fa68c46f> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/fe3ae36db858ec9ee65cac6648ff4a55> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/c9719d10eab6d6414e91ddd392182674> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/1d44563cafd8e653e8e95aa42ed62800> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/d18e1633d7de4b08855c6df216e99096> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/ba4ca6cc5c88b95b8fcd7fa780348d0b> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/fcad820435f115da8c454186d24550c7> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/a930256214fe472104b3a33968453de5> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/486814c0de72894dc688276c81c6cff7> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/f5be68bd04561f50b3c91cdd2656b8e2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/6f75fbec916362ad7de37735d2879e88> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/3165e66f9a16c1aa1c234bccfa87e275> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/9f88ba1c8fabceb58096d05de0617ddd> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/e546e9466d8a1caf4783508f8e683fcd> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/cd4df5e9af16fa8c2c12b2e0f20fff3a> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/0a8aafbad35d01df02fa395ce2ed3ce8> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/a2d8581179f6d34c5dc8950f136b0433> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/eabdc8757f56d26c25ed5ed7dbd97423> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/eef239c496d1dc031bd897386ee199cc> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/40f5fd3c5e2c0d5f17f557a03330f97c> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/4c127b36c830030fab24ee2e4cbfcc1a> ;
+    ro:0001018 <http://np.petapico.org/RAZ0xz6u3uTpgaYOYepxR0eLytFJlF4dfqrk5QAaiKrPE> ;
+    ro:0001018 <http://np.petapico.org/RAjJK9s5rLxMrJzTc7Ye-8WVqN6XdH7Cf4nbZV8wYAIpA> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Phialophora"@en, " Phialophora americana"@en, " Phialophora attinorum"@en, " Phialophora chinensis"@en, " Phialophora expanda"@en, " Phialophora macrospora"@en, " Phialophora tarda"@en, " Phialophora verrucosa."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}

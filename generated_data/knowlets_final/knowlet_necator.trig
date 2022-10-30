@@ -1,0 +1,98 @@
+
+@prefix this: <http://github.com/GenKnowlets/genknowlets/knowlet/683574ca117aa5a36f0f5afd75de3630> .
+@prefix sub: <http://github.com/GenKnowlets/genknowlets/knowlet/683574ca117aa5a36f0f5afd75de3630#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-sytanx-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#term_> .
+@prefix ncit: <http://ncithesaurus.nci.nih.gov/ncitbrowser/ConceptReport.jsp?dictionary=NCI_Thesaurus&ns=ncit&code=> .
+@prefix xsd: <http://www.w3.org/tr/xmlschema11-2/#> .
+@prefix eco: <https://evidenceontology.org/term/> .
+@prefix edam: <http://edamontology.org/> .
+@prefix datacite: <http://purl.org/spar/datacite> .
+@prefix ro: <http://purl.obolibrary.org/obo/RO_> .
+@prefix obi: <http://purl.obolibrary.org/obo/OBI_> .
+@prefix npdate: <http://github.com/GenKnowlets/npdate/> .
+@prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+sub:Head {
+  this: np:hasAssertion sub:assertion ;
+    np:hasProvenance sub:provenance ;
+    np:hasPublicationInfo sub:pubinfo ;
+    a np:Nanopublication ;
+    a "knowlet"@en .
+}
+
+sub:assertion {
+  this: a ncit:C47846 ;
+    prov:wasDerivedFrom sub:CardinalAssertion ;  
+    dcterms:subject "necator"@en .
+  
+  sub:CardinalAssertion a prov:collection ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/org/f0edc87ce4b69f4ab35f4c9ca644541e> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/gbad/233607389b75d7b7cb830ffe00a520b2> ;
+    ro:0001018 <http://github.com/GenKnowlets/genknowlets/art/8fbe4baa34bf9ce589f55591f795280f> ;
+    ro:0001018 <http://purl.org/np/RAVN5NKRKnj_wxmNJhlY3hJJrSCxiUHrOHeLsFGhP01HU> ;
+    ro:0001018 <http://purl.org/np/RAwSY0RIqU2uYrWo67u5PiuuB2F-pWdOh01iAyTzmob1U> ;
+    ro:0001018 <http://np.petapico.org/RAJVdHRez820Q_Uvq-Ei7oqokv751O7qC7YRRNJ79D3os> ;
+    ro:0001018 <http://np.petapico.org/RA_5ZidaWSpNvPrS-eDbVA8kTmEbVEV5bjEsJJe958ciw> ;
+    ro:0001018 <http://np.petapico.org/RAIVru74N2ESSVw4UJCALyai-XNCikhHr8reXMdidPYnw> ;
+    ro:0001018 <http://np.petapico.org/RAL6Uje31NByBjzQ4A2-5xaTPiPDs4ZnOLDodPuHVWHdc> ;
+    ro:0001018 <http://np.petapico.org/RAZWMDsMuoFuyFLDnFG-aeoDJj3XpbOKHtj5b42aB4z_Y> ;
+    ro:0001018 <http://np.petapico.org/RAeESnauIIeDvrV75QuEI-lnSirlNsr8bkqQtC0zc0ai8> ;
+    ro:0001018 <http://np.petapico.org/RA4tlE23ayzYBFWjiEJiWY1CJxcg_mPJiP-1wqUOwUuz8> ;
+    ro:0001018 <http://np.petapico.org/RA3KbnF1SRQqpunbimyClNwl_eVUcCZKMoqvpjzKndx7w> ;
+    ro:0001018 <http://np.petapico.org/RAg1QuXPHnitKUzpL3nSf20CXfgENqzwnzASJ7c0SfFdU> ;
+    ro:0001018 <http://np.petapico.org/RAPJDXaACr85837xCwN2vvTe8gg57NZThwHV_twxjl45k> .
+ 
+}
+
+sub:provenance {
+  sub:assertion a prov:Entity ;
+    prov:wasGeneratedBy sub:knowletActivity ;
+    pav:authoredBy sub:author ;
+    pav:hasCurrentVersion "1.0"@en ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> .
+
+  sub:authors a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; ;
+    prov:actedOnBehalfOf sub:organization .
+
+  sub:organization a prov:Agent, prov:Organization ;
+    foaf:name "Universidade Federal do Rio de Janeiro"@en , "Fundação Oswaldo Cruz"@en .
+
+  sub:knowletActivity a prov:Activity , ncit:C47846 ; 
+    prov:wasAssociatedWith sub:author ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+
+}
+
+sub:pubinfo {
+  this: a prov:Entity ;
+    pav:authoredBy sub:authors ;
+    pav:createdWith sub:software ;
+    prov:wasGeneratedBy sub:manualAssertion ;
+    dcterms:accessRights <https://creativecommons.org/licenses/by/4.0/> ;
+    prism:keywords "Necator"@en, " Necator americanus."@en, "knowlet"@en , ncit:C47846.
+
+  sub:author a prov:Agent ;
+    dcterms:creator <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ; .
+
+  sub:software a prov:Agent , prov:softwareAgent ; 
+    foaf:name "KnowletGenerator"@en ;
+    pav:version "1.0"^^xsd:integer ;
+    pav:authoredBy <https://orcid.org/0000-0001-9582-4595> , <https://orcid.org/0000-0002-0943-5356> , <https://orcid.org/0000-0002-0792-8157> , <https://orcid.org/0000-0002-7930-612X> ;
+    edam:data_1188 <https://doi.org/10.5281/zenodo.4818638> ;
+    dcterms:source <https://github.com/MatheusFeijoo/Genome-Assembly-nanoPublication> .
+
+  sub:manualAssertion a prov:Activity , eco:0000218 ;
+    prov:wasAssociatedWith sub:author, sub:software ;
+    dcterms:dateSubmitted "DATETIME"^^xsd:datetime ;
+    ncit:C25301 npdate:29 ;
+    ncit:C29846 npdate:6 ;
+    ncit:C29848 npdate:2022 .
+}
